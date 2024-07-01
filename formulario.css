@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap');
+
+:root {
+    --dark-color: #000;
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-color);
+    perspective: 1000px;
+    padding: 50px 0px;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+input {
+    color: white;
+    background: var(--dark-color);
+    border: 1px solid #fcfcfc;
+    border-radius: 10px;
+    text-align: left;
+    padding: 16px;
+    width: 50%;
+    vertical-align: middle;
+    font-family: "Loved by the King", cursive;
+    font-size: 20px;
+}
+
+.subText {
+  color: white;
+  font-family: "Loved by the King", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.mv-btn {
+  font-family: "Loved by the King", cursive;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-clip: text;
+  position: relative;
+  border: 2px solid #ff3135;
+  background: linear-gradient(45deg, #fff 50%, #ff3135 50%);
+  color: #fff; /*For IE*/;
+  font-size: 18px;
+  width: 10vh;
+}
+
+.mv-btn-neutral {
+  border: 2px solid #42c0ff;
+  background: linear-gradient(45deg, #fff 50%, #42c0ff 50%);
+}
+
+.mv-btn-info {
+  border: 2px solid #1396A8;
+  background: linear-gradient(45deg, #fff 50%, #1396A8 50%);
+}
+
+.mv-btn-warning {
+  border: 2px solid #ffd858;
+  background: linear-gradient(45deg, #fff 50%, #ffd858 50%);
+}
+
+.mv-btn-sucess {
+  border: 2px solid #00be4f;
+  background: linear-gradient(45deg, #fff 50%, #00be4f 50%);
+}
+
+.mv-btn:after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: linear-gradient(45deg, #ff3135 50%, transparent 50%) !important;
+  z-index: -1 !important;
+}
+
+mv-btn-neutral:after {
+  background: linear-gradient(45deg, #42c0ff 50%, transparent 50%) !important;
+}
+
+mv-btn-info:after {
+  background: linear-gradient(45deg, #1396A8 50%, transparent 50%) !important;
+}
+
+.mv-btn-sucess:after {
+  background: linear-gradient(45deg, #00be4f 50%, transparent 50%) !important;
+}
+
+.mv-btn-warning:after {
+  background: linear-gradient(45deg, #ffd858 50%, transparent 50%) !important;
+}
+
+.mv-btn,
+.mv-btn:after {
+  background-size: 300% !important;
+  background-position: 100% !important;
+  transition: 1s, font-size 0.2s !important;
+}
+
+.mv-btn-fw,
+.mv-btn-fw:after {
+  transition: 2s, font-size 0.4s !important;
+}
+
+.mv-btn:hover,
+.mv-btn:hover:after {
+  background-position: 0 !important;
+  font-size: 1.1em !important;
+  color: #ff3135 !important;
+}
+
+.mv-btn-neutral:hover,
+.mv-btn-neutral:hover:after {
+  color: #42c0ff !important;
+}
+
+.mv-btn-info:hover,
+.mv-btn-info:hover:after {
+  color: #1396A8 !important;
+}
+
+.mv-btn-sucess:hover,
+.mv-btn-sucess:hover:after {
+  color: #00be4f !important;
+}
+
+.mv-btn-warning:hover,
+.mv-btn-warning:hover:after {
+  color: #ffd858 !important;
+}
+
+
+.pt50 {
+  padding-top: 50px !important;
+}
+
+.pb100 {
+  padding-bottom: 100px !important;
+}

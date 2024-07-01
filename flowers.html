@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js" type="text/javascript"></script><title>Flowers</title>
 </head>
 
-<div class="title-gab">
-    <h1 class="pedido" style="margin-top: 20px">Tatá, você aceita:</h1>
-    <h1 class="pedido">Ser a personagem principal no meu jogo da vida?</h1>
+<div id="title1" class="title-gab">
+    <h1 id="pedidoTitle" class="pedido" style="margin-top: 20px"></h1>
+    <h1 id="tempoJuntos" class="pedido"></h1>
     <h1 class="pedido">Ser a gravidade que mantém meus pés no chão?</h1>
     <h1 class="pedido">A equação que completa minha teoria?</h1>
+    <div style="margin-top: 45px; display: flex; gap: 15px;">
+      <button id="pedidoSim" class="mv-btn mv-btn-sucess" type="button" onclick="mostrarFlores()">SIM</button>
+      <button id="pedidoNao" class="mv-btn mv-btn" type="button">NAO</button>
+    </div>
+</div>
+
+<div id="title2" class="title-gab" style="display:none">
+  <h1 class="pedido" style="margin-top: 20px">Eu te amo muitãaooo</h1>
+  <h1 class="pedido">Agora você é minha namorada, meu amor</h1>
 </div>
 
 <div id="flowersContent" class="flowersContent not-loaded">
@@ -315,3 +325,16 @@
     </div>
 </div>
 </html>
+
+<script>
+  $(document).ready(function(){
+    var nome = getNomeCompleto().toLowerCase();
+    var nomes = ['thays', 'tata', 'tatá'];
+
+    if (nomes.some(n => nome.includes(n))) {
+        var nomeFormatado = nome.charAt(0).toUpperCase() + nome.slice(1);
+        $('#pedidoTitle').text(`${nomeFormatado} (Tatá) meu amor, você aceita:`);
+        $('#tempoJuntos').text(`Passar os próximos ${getIdadeCalculada()} anos juntos comigo?`);
+    }
+  });
+</script>
