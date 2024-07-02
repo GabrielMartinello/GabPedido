@@ -1,10 +1,23 @@
 function mostrarFlores() {
   document.getElementById('title1').style.display = 'none';
   document.getElementById('title2').style = 'block';
+
+  const finalDaPagina = document.getElementById('flowersContent');
+
+  const opcoesScroll = {
+      behavior: 'smooth',  
+      block: 'end'
+  };
+
+finalDaPagina.scrollIntoView(opcoesScroll);
   const c = setTimeout(() => {
     document.getElementById('flowersContent').classList.remove("not-loaded");
     clearTimeout(c);
   }, 1000);
+}
+
+function jumpscare() {
+  window.location.href = 'https://www.youtube.com/watch?v=dCj1BWdFYSY';
 }
 
 function redirectScreen() {
@@ -13,7 +26,6 @@ function redirectScreen() {
   var input3 = document.getElementById('anosInput').value;
 
   if(input1 !== null && input2 !== null && input1 !== null) {
-      // Construir a query string
       var queryString = `?input1=${encodeURIComponent(input1)}&input2=${encodeURIComponent(input2)}&input3=${encodeURIComponent(input3)}`;
       window.location.href = 'flowers.html' + queryString;
   }
