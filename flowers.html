@@ -329,12 +329,17 @@
 <script>
   $(document).ready(function(){
     var nome = getNomeCompleto().toLowerCase();
+    var nomeFormatado = nome.charAt(0).toUpperCase() + nome.slice(1)
     var nomes = ['thays', 'tata', 'tatá'];
+    var mensagem = `${nomeFormatado} `;
 
     if (nomes.some(n => nome.includes(n))) {
-        var nomeFormatado = nome.charAt(0).toUpperCase() + nome.slice(1);
-        $('#pedidoTitle').text(`${nomeFormatado} (Tatá) meu amor, você aceita:`);
-        $('#tempoJuntos').text(`Passar os próximos ${getIdadeCalculada()} anos juntos comigo?`);
+        mensagem += '(Tatá) ';
     }
+    
+    mensagem += 'meu amor, você aceita:';
+
+    $('#pedidoTitle').text(mensagem);
+    $('#tempoJuntos').text(`Passar os próximos ${getIdadeCalculada()} anos juntos comigo?`);
   });
 </script>
